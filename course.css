@@ -1,0 +1,131 @@
+body {
+    margin: 0; /* Remove default margins */
+  }
+  .background-image {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; /* Optional: center the image */
+    height: 100vh; /* Ensure full viewport height */
+    width: 100%;
+    position: fixed; /* Fix the image in place */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Send to back of other elements */
+  }
+  .heading-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    padding: 2px;
+    text-align: center;
+  }
+  .heading-box h1 {
+    font-size: 40px; /* Adjust font size as desired */
+    color: #fff; /* White text for contrast */
+    font-weight: bold;
+    text-transform: uppercase; /* Optional: for a more stylized look */
+    letter-spacing: 2px; /* Optional: for visual interest */
+  }  
+
+  .course-list {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  }   
+  
+  .course-item {
+    color: white;
+    width: 300px;
+  margin: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.65); /* Black with 50% opacity */
+  padding: 20px; /* Optional: add padding for visual space */
+  border-radius: 10px; /* Optional: soften the edges */
+  }
+  .course-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0d48ad; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    cursor: pointer; /* Indicate interactivity */
+  }
+  /* Optional hover effect */
+  .button:hover {
+    background-color: #1b5f08; /* Darker green on hover */
+  }
+
+  /* Styles for all screens */
+body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+  
+  .background-image {
+    /* ...background image styles... */
+  }
+  
+  .courses {
+    /* ...general course section styles... */
+  }
+  
+  .course-item {
+    /* ...general course item styles... */
+  }
+  
+  /* Styles for screens wider than 600px (approximately tablets and desktops) */
+  @media (min-width: 600px) {
+    /* Desktop-specific styles */
+    .heading-box {
+      /* Example: Adjust heading font size and position for desktop */
+      font-size: 2em;
+      text-align: center;
+      padding: 2px;
+    }
+  
+    .course-list {
+      /* Example: Arrange course items in a grid on desktop */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+  
+    .course-item {
+      /* Example: Adjust layout for grid display */
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Styles for screens smaller than 600px (approximately phones) */
+  @media (max-width: 600px) {
+    /* Mobile-specific styles */
+    .heading-box {
+      /* Example: Center heading on mobile */
+      text-align: center;
+    }
+  
+    .course-list {
+      /* Example: Stack course items vertically on mobile */
+      flex-direction: column;
+    }
+  
+    .course-item {
+      /* Example: Adjust spacing and font sizes for mobile readability */
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+  }
+  
